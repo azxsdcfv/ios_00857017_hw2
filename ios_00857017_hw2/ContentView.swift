@@ -9,8 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            HomeView().tabItem {
+                Label("首頁",systemImage: "house")
+            }
+            MusicView().tabItem {
+                Label("音樂",systemImage: "music.note")
+            }
+            AlbumView().tabItem {
+                Label("專輯",systemImage: "book")
+            }
+            VideoView().tabItem {
+                Label("影片",systemImage: "play.tv")
+            }
+            AboutView().tabItem {
+                Label("簡介",systemImage: "questionmark.circle.fill")
+            }
+        }
     }
 }
 
